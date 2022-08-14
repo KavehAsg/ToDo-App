@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="icon" href="./assets/icon.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h1>To-Do List</h1>
+
+    <main class="container">
+
+        <section class="input">
+            <article class="add-task">
+                <input class="user-input" type="text" placeholder="Type yor task">
+                <button class="user-confirm"><img src="./assets/add-icon.png" alt="add-icon" class="icon"></button>
+            </article>
+
+            <article class="select">
+                <select name="filter" id="filter">
+                    <option value="all" selected>All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </article>
+        </section>
+
+        <section class="show">
+            <article class="show-task">
+                <input type="text" class="task-exp" value="12ee" readonly>
+                <div class="task-buttons">
+                    <button class="mark-done"></button>
+                    <button class="remove-task"></button>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

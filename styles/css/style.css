@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  background: -o-linear-gradient(to right, #3a1c71, #d76d77, #ffda7b);
+  background: -webkit-gradient(linear, left top, right top, from(#3a1c71), color-stop(#d76d77), to(#ffda7b));
+  background: -o-linear-gradient(left, #3a1c71, #d76d77, #ffda7b);
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffda7b);
+  padding: 24px 0;
+}
+body h1 {
+  color: #fff;
+}
+
+main.container {
+  width: clamp(280px, 100%, 1024px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 36px;
+}
+main.container button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: #f3e5f5;
+  padding: 7px;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+main.container button:hover {
+  background: #e0e0e0;
+}
+main.container svg {
+  pointer-events: none;
+}
+
+form.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 36px;
+  width: clamp(280px, 100%, 760px);
+}
+form.input div.add-task {
+  width: 70%;
+  height: 40px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 3px;
+  padding: 5px 8px;
+}
+form.input input.user-input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+form.input input.user-input::-webkit-input-placeholder {
+  font-size: 0.9rem;
+}
+form.input input.user-input::-moz-placeholder {
+  font-size: 0.9rem;
+}
+form.input input.user-input:-ms-input-placeholder {
+  font-size: 0.9rem;
+}
+form.input input.user-input::-ms-input-placeholder {
+  font-size: 0.9rem;
+}
+form.input input.user-input::placeholder {
+  font-size: 0.9rem;
+}
+form.input input.user-input:focus {
+  border-bottom: #aaa 1px solid;
+}
+form.input div.select select {
+  width: 150px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  width: inherit;
+}
+.show .show-task {
+  width: clamp(280px, 100%, 560px);
+  background: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+.show .task-exp {
+  height: auto;
+  resize: none;
+  outline: none;
+  background-color: #f3e5f5;
+  border-radius: 3px;
+  padding: 8px;
+  font-size: 1rem;
+}
+.show .task-exp::-webkit-scrollbar {
+  width: 4px;
+}
+.show .task-exp::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 3px;
+}
+.show .task-exp::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+.show .task-exp:read-only {
+  background-color: inherit;
+  border: none;
+}
+.show .show-task.done {
+  background: #e0e0e0;
+}
+.show .show-task.done .task-exp {
+  text-decoration: line-through;
+}
+.show .show-task.done button.mark-done {
+  background-color: #e0e0e0;
+}
+.show .show-task.done button.mark-done:hover {
+  background-color: #f3e5f5;
+}
+.show div.task-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+.show button.edit-task.active {
+  background-color: #e0e0e0;
+  transform: translateX(-30px);
+}
+.show button.edit-task.active:hover {
+  background-color: #f3e5f5;
+}
+
+/*# sourceMappingURL=style.css.map */

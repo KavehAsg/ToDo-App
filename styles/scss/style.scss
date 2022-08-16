@@ -1,0 +1,136 @@
+@import 'mixins&var.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include flex(column, space-between, center, 16px);
+    @include gardiant;
+    padding: 24px 0;
+
+    h1 {
+        color: $mainColor;
+    }
+}
+
+main.container {
+    width: clamp(280px, 100%, 1024px);
+    @include flex(column, space-between, center, 36px);
+
+    button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        outline: none;
+        background-color: $primaryColor;
+        padding: 7px;
+        border-radius: 3px;
+        @include flex(row, center, center, 0);
+        @include transition(all, 0.2s, ease-in);
+
+        &:hover {
+            background: $secondColor;
+        }
+    }
+
+    svg {
+        pointer-events: none;
+    }
+}
+
+form.input {
+    @include flex(row, space-between, center, 36px);
+    width: clamp(280px, 100%, 760px);
+
+    div.add-task {
+        width: 70%;
+        height: 40px;
+        background-color: $mainColor;
+        @include flex(row, space-between, center, 16px);
+        border-radius: 3px;
+        padding: 5px 8px;
+    }
+
+    input.user-input {
+        width: 90%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 1.2rem;
+        @include transition(all, 0.3s, ease-in);
+        @include placeholder;
+
+        &:focus {
+            border-bottom: #aaa 1px solid;
+        }
+    }
+
+    div.select select {
+        width: 150px;
+        height: 40px;
+        padding: 8px;
+        border-radius: 3px;
+        border: none;
+    }
+}
+
+.show {
+    @include flex(column-reverse, space-around, center, 16px);
+    width: inherit;
+
+    .show-task {
+        width: clamp(280px, 100%, 560px);
+        background: $mainColor;
+        padding: 12px;
+        border-radius: 5px;
+        @include flex(row, space-between, center, 20px);
+    }
+
+    .task-exp {
+        height: auto;
+        resize: none;
+        outline: none;
+        background-color: $primaryColor;
+        border-radius: 3px;
+        padding: 8px;
+        font-size: 1rem;
+        @include scrollbar(4px, $secondColor , $mainColor);
+
+        &:read-only {
+            background-color: inherit;
+            border: none;
+        }
+    }
+
+    .show-task.done {
+        background: $secondColor;
+
+        .task-exp {
+            text-decoration: line-through;
+        }
+
+        button.mark-done {
+            background-color: $secondColor;
+
+            &:hover {
+                background-color: $primaryColor;
+            }
+        }
+    }
+
+    div.task-buttons {
+        @include flex(column, space-around, center, 8px);
+    }
+
+    button.edit-task.active {
+        background-color: $secondColor;
+        transform: translateX(-30px);
+
+        &:hover {
+            background-color: $primaryColor;
+        }
+    }
+}

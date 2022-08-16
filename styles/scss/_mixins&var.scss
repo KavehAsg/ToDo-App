@@ -1,0 +1,70 @@
+$mainColor: #fff;
+$primaryColor: #f3e5f5;
+$secondColor: #e0e0e0;
+
+
+@mixin gardiant {
+    background: -o-linear-gradient(to right, #3a1c71, #d76d77, #ffda7b);
+    background: -webkit-gradient(linear, left top, right top, from(#3a1c71), color-stop(#d76d77), to(#ffda7b));
+    background: -o-linear-gradient(left, #3a1c71, #d76d77, #ffda7b);
+    background: linear-gradient(to right, #3a1c71, #d76d77, #ffda7b);
+}
+
+@mixin flex($direction , $justify , $align , $gap) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+    gap: $gap;
+    @content;
+}
+
+@mixin transition($property , $time , $speed) {
+    -webkit-transition: $property $time $speed;
+    -o-transition: $property $time $speed;
+    transition: $property $time $speed;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        font-size: 0.9rem;        
+    }
+
+    &::-moz-placeholder {
+        font-size: 0.9rem;        
+    }
+
+    &:-ms-input-placeholder {
+        font-size: 0.9rem;        
+    }
+
+    &::-ms-input-placeholder {
+        font-size: 0.9rem;        
+    }
+
+    &::placeholder {
+        font-size: 0.9rem;        
+    }
+}
+
+@mixin scrollbar($width , $thumbColor , $trackColor) {
+    &::-webkit-scrollbar{
+        width: $width;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $thumbColor;
+        border-radius: 3px;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: $trackColor;
+    }
+}

@@ -20,6 +20,7 @@ main.container {
     width: clamp(280px, 100%, 1024px);
     @include flex(column, space-between, center, 36px);
 
+
     button {
         width: 30px;
         height: 30px;

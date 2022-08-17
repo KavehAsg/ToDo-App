@@ -23,7 +23,17 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#3a1c71), color-stop(#d76d77), to(#ffda7b));
   background: -o-linear-gradient(left, #3a1c71, #d76d77, #ffda7b);
   background: linear-gradient(to right, #3a1c71, #d76d77, #ffda7b);
-  padding: 24px 0;
+  padding: 24px 12px;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 3px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #fff;
 }
 body h1 {
   color: #fff;
@@ -98,7 +108,6 @@ form.input {
 }
 form.input div.add-task {
   width: 70%;
-  height: 40px;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,6 +256,28 @@ form.input div.select select {
 }
 .show button.edit-task.active:hover {
   background-color: #f3e5f5;
+}
+
+@media (min-width: 280px) and (max-width: 576px) {
+  form.input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 18px;
+  }
+  form.input div.add-task {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

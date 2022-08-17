@@ -9,7 +9,9 @@
 body {
     @include flex(column, space-between, center, 16px);
     @include gardiant;
-    padding: 24px 0;
+    padding: 24px 12px;
+    @include scrollbar(6px, $secondColor , $mainColor);
+
 
     h1 {
         color: $mainColor;
@@ -48,7 +50,6 @@ form.input {
 
     div.add-task {
         width: 70%;
-        height: 40px;
         background-color: $mainColor;
         @include flex(row, space-between, center, 16px);
         border-radius: 3px;
@@ -133,5 +134,17 @@ form.input {
         &:hover {
             background-color: $primaryColor;
         }
+    }
+}
+
+@media (min-width: 280px) and (max-width: 576px) {
+    form.input {
+        @include flex(column, space-between, center, 18px);
+
+
+        div.add-task{
+            width: 100%;
+        }
+
     }
 }
